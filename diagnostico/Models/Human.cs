@@ -14,10 +14,10 @@ namespace diagnostico.Models
 
         public void attack(BaseEntity enemy)
         {
-            if(stamina<=3) throw new Exception($"{name} is exahusted");
+            if(stamina<=3) throw new Exception($"{name} is exhausted");
             int _attack = isCriticalAttack() ? attackPower + 2: attackPower;
             enemy.recieveDamage(_attack);
-            getExahusted(3);
+            getExhausted(3);
         }
         public bool isCriticalAttack(){
             bool isCritical = new Random().Next(0,luck + 3) > luck;

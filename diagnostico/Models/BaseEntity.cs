@@ -19,7 +19,7 @@ namespace diagnostico.Models
             health=_health;
         }
 
-        public virtual void getExahusted(int _stamina){
+        public virtual void getExhausted(int _stamina){
             if(stamina<=_stamina)
                 stamina = 0;
             else

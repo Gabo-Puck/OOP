@@ -15,12 +15,12 @@ namespace diagnostico.Models
 
         public void attack(BaseEntity enemy)
         {
-            if(stamina<=3) throw new Exception($"{name} is exahusted");
+            if(stamina<=3) throw new Exception($"{name} is exhausted");
             if(enemy.isDead) return;
             int _attack = attackPower + anger;
             int healthLeft = enemy.recieveDamage(_attack);
             if(healthLeft==0) setAnger(anger+1);
-            getExahusted(3);
+            getExhausted(3);
 
         }
 
