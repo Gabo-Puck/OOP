@@ -14,7 +14,7 @@ namespace diagnostico.Models
 
         public void attack(BaseEntity enemy)
         {
-            if(stamina==0) throw new Exception($"{name} is exahusted");
+            if(stamina<=3) throw new Exception($"{name} is exahusted");
             int _attack = isCriticalAttack() ? attackPower + 2: attackPower;
             enemy.recieveDamage(_attack);
             getExahusted(3);
